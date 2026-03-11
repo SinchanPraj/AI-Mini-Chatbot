@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Mini Chatbot</title>
+
+<style>
+body {
+    background: #e8f0fe;
+    font-family: Arial;
+    text-align: center;
+}
+
+#chatbox {
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px gray;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #555;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>AI – MINI CHATBOT</h1>
+
+<div id="chatbox">
+<h3>Ask Your AI Question</h3>
+
+<input type="text" id="userInput" placeholder="Type your question...">
+<br><br>
+
+<button onclick="answer()">Ask</button>
+
+<p id="response"></p>
+</div>
+
+<footer>© Sinchan P 2025 — All Rights Reserved</footer>
+
+<script>
+
+function answer() {
+
+let q = document.getElementById("userInput").value.toLowerCase();
+
+let qa = {
+"what is ai": "AI allows machines to perform tasks that require human intelligence.",
+"what is machine learning": "Machine Learning is a subset of AI that enables systems to learn from data.",
+"what is deep learning": "Deep Learning uses neural networks to learn from large datasets.",
+"what is nlp": "NLP helps machines understand and process human language.",
+"what is a chatbot": "A chatbot is a computer program that interacts with users like a human."
+};
+
+let res = qa[q] || "Sorry, I know only basic AI questions.";
+
+document.getElementById("response").innerText = res;
+
+}
+
+</script>
+
+</body>
+</html>
